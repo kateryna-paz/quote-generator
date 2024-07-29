@@ -1,7 +1,22 @@
-import Image from "next/image";
+import Lesson from "./lesson";
+import reactCourse from "./reactCourse.json";
 
-export default function Home() {
+async function getAllCourses(): Promise<typeof reactCourse> {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(reactCourse), 1000);
+  });
+}
+
+export default async function Home() {
+  const reactCourse = await getAllCourses();
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <main className="p-12">
+      <h1 className="text-4xl text-center mb-6">{reactCourse.title}</h1>
+      <ul className="bg-slate-900 p-8 rounded-2xl">
+        {reactCourse.lessons.map((l) => {
+          return <Lesson key={l.name} title={l.title} points={l.points} />;
+        })}
+      </ul>
+    </main>
   );
 }
