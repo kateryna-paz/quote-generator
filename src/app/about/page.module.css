@@ -1,0 +1,56 @@
+.section {
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+
+  transition: box-shadow 0.3s;
+}
+
+.section:hover {
+  box-shadow: 0 12px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #27ae60;
+  padding-bottom: 5px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+}
+
+.ul,
+.ol {
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+.ul li,
+.ol li {
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  position: relative;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transition: border-bottom 0.5s ease-in-out, border-right 0.5s ease-in-out;
+}
+
+.ul {
+  list-style-type: disc;
+}
+
+.ol {
+  list-style-type: decimal;
+}
+
+.ol li:hover,
+.ul li:hover {
+  border-bottom: 2px solid #27ae60;
+  border-right: 2px solid #27ae60;
+}

@@ -2,32 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700");
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-style: normal;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f1f5ff;
+  color: #333333;
+  margin: 0;
+  padding: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+header ul a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  transition: all 0.4s ease-in-out;
+  border-radius: 0.3rem;
+  border-bottom: 4px solid transparent;
+}
+
+header ul a:hover {
+  background-color: rgb(27, 147, 67);
+  border-bottom: 4px solid rgb(23, 123, 77);
+}
+
+main {
+  padding: 3rem;
+}
+
+footer nav a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(59 130 246);
+  padding: 0.5rem 1.2rem;
+  transition: all 0.4s ease-in-out;
+  border-radius: 0.3rem;
+  border-left: 4px solid transparent;
+}
+
+footer nav a:hover {
+  background-color: rgba(220, 238, 237, 0.544);
+  border-left: 4px solid rgb(23, 70, 123);
+  color: rgb(29 78 216);
 }
