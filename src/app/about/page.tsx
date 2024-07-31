@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 
 const About = () => {
   return (
-    <main className="main-section">
+    <>
       <section className={styles.section}>
         <h2>Welcome to Quote Generator!</h2>
         <p>
@@ -62,7 +62,7 @@ const About = () => {
           resonate with you.
         </p>
       </section>
-    </main>
+    </>
   );
 };
 
